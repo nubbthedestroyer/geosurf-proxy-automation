@@ -14,3 +14,5 @@ rm -rf /etc/squid3/users
 sudo cp etc/sarg/* /etc/sarg
 sudo cp etc/squid/* /etc/squid
 sudo cp etc/squid3/* /etc/squid3
+
+service squid3 restart
