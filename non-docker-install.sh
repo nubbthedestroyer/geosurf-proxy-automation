@@ -11,6 +11,6 @@ rm -rf /etc/squid3/proxy-manager.py
 rm -rf /etc/squid3/squid.conf
 rm -rf /etc/squid3/users
 
-cp etc/sarg/* /etc/sarg/
-cp etc/squid/* /etc/squid/
-cp etc/squid3/* /etc/squid3/
+sudo cp etc/sarg/* /etc/sarg
+sudo cp etc/squid/* /etc/squid
+sudo cp etc/squid3/* /etc/squid3
