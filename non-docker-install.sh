@@ -15,4 +15,5 @@ sudo cp etc/sarg/* /etc/sarg
 sudo cp etc/squid/* /etc/squid
 sudo cp etc/squid3/* /etc/squid3
 
+PATH=$PATH:/usr/sbin
 service squid3 restart
