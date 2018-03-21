@@ -16,4 +16,9 @@ sudo cp etc/squid/* /etc/squid
 mkdir -p /etc/squid3
 sudo cp etc/squid3/* /etc/squid3
 
+mkdir /var/spool/squid3
+chown -R proxy:proxy /var/spool/squid3
+
 sudo systemctl restart squid.service
+
+python3 /etc/squid3/proxy-manager.py

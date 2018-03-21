@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export http_proxy='http://18.216.52.241:3128/'
+export http_proxy='http://18.216.52.241:8080/'
 
 OUTPUT_FILE=/tmp/$$.txt
     wget -nv --proxy-user=test --proxy-password=test google.com > ${OUTPUT_FILE} 2>&1
