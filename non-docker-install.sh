@@ -27,4 +27,5 @@ chown -R proxy:proxy /var/spool/squid3
 
 sudo systemctl restart squid.service
 
-python3 /etc/squid3/proxy-manager.py
+cd /etc/squid3
+python3 proxy-manager.py

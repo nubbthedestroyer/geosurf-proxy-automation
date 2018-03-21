@@ -19,7 +19,7 @@ def check_ip():
     return ext_ip
 
 
-server = str(check_ip()) + ":8080"
+server = str(check_ip().decode("utf-8").strip('\n')) + ":8080"
 
 ###############################
 path = "/etc/squid3/users"
