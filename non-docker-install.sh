@@ -3,6 +3,12 @@
 chmod +x *.sh
 chmod +x *.py
 
+apt-get update
+apt-get install -y git
+
+git clone https://github.com/nubbthedestroyer/geosurf-proxy-automation
+cd geosurf-proxy-automation
+
 ./install-deps.sh
 
 rm -rf /etc/sarg/sarg.conf
