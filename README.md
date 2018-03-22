@@ -1,7 +1,13 @@
 ### Install
 
-Just run these commands on a Ubuntu 16.04 virtual server in a public cloud.  A good example would be Amazon Lightsail or Digital Ocean.
+Just run these commands on a Ubuntu 16.04 virtual server in a public cloud.  A good example would be Amazon Lightsail or Digital Ocean.  Depending on the server, you may need to run them one at a time.
 
+This first:
+```bash
+sudo bash
+```
+
+Then this:
 ```bash
 apt update
 apt install git
