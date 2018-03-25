@@ -107,7 +107,7 @@ while choise != 4:
         with open(path_to_conf, 'w+') as c:
             c.truncate()
             for p in port_list:
-                c.write('cache_peer ' + endpoint + ' parent ' + str(p) + ' 0 no-query default \n')
+                c.write('cache_peer ' + endpoint + ' parent ' + str(p) + ' 0 no-query default name=' + endpoint + '_' + str(p) + ' \n')
 
         task = 'sudo systemctl restart squid.service'
         subprocess.Popen(task, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
