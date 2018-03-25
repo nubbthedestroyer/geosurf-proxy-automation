@@ -109,6 +109,9 @@ while choise != 4:
             for p in port_list:
                 c.write('cache_peer ' + endpoint + ' parent ' + str(p) + ' 0 no-query default \n')
 
+        task = 'sudo systemctl restart squid.service'
+        subprocess.Popen(task, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
     elif choise == "5":
         print("Bye")
         sys.exit()
