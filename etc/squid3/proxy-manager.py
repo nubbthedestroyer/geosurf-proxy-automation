@@ -40,7 +40,8 @@ while choise != 4:
     1. Generate new user list and erase previous list
     2. Add one new user
     3. Delete one existing user
-    4. Exit program 
+    4. Setup your cache peer location
+    5. Exit program 
 
     Type number and press Enter: """)
 
@@ -87,13 +88,28 @@ while choise != 4:
         time.sleep(1)
     elif choise == "3":
         print ("\nType username you want to delete and press Enter:")
-        name=input()
+        name = input()
         #print ("Do some work")
         task = ("htpasswd -D %s %s" % (path, name))
         subprocess.Popen(task, shell=True, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
-        Print ("User deleted:",name)
+        print("User deleted:",name)
         time.sleep(1)
     elif choise == "4":
+
+        path_to_conf = '/etc/squid3/cache_peers.conf'
+
+        endpoint = input("Please enter the geosurf endpoint you would like to use for this proxy:")
+        start_port = input("Please enter the first port in the range of ports for this geosurf proxy endpoint:")
+        end_port = input("Please enter the last port:")
+
+        port_list = range(int(start_port), int(end_port))
+
+        with open(path_to_conf, 'w+') as c:
+            c.truncate()
+            for p in port_list:
+                c.write('cache_peer ' + endpoint + ' parent ' + str(p) + ' 0 no-query default \n')
+
+    elif choise == "5":
         print("Bye")
         sys.exit()
     else:

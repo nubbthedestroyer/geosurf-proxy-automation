@@ -8,7 +8,7 @@ chmod +x *.py
 rm -rf /etc/sarg/sarg.conf
 rm -rf /etc/squid/cachemgr.conf
 rm -rf /etc/squid/squid.conf
-rm -rf /etc/squid3/proxy-manager.py
+rm -rf /etc/squid3/*.py
 rm -rf /etc/squid3/squid.conf
 rm -rf /etc/squid3/users
 
